@@ -1,0 +1,41 @@
+package com.java.test;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int testcases = sc.nextInt();
+		
+		while(testcases > 0) {
+			boolean flag = false;
+			String str = sc.next();
+			int len = str.length();
+			flag=checkPalindrome(str,len);
+			if(flag) {
+				if(len % 2 ==0) {
+					System.out.println("YES EVEN");
+				}else {
+					System.out.println("YES ODD");
+				}
+			}else {
+				System.out.println("NO");
+			}
+			
+			testcases--; 
+		}
+	}
+	
+	public static boolean checkPalindrome(String str, int len) {
+		
+		if(len % 2 == 0) {
+			String str1 = str.substring(0,len/2);
+			String str1 = str.substring(len/2,len);
+		}
+		
+		System.out.println(str.length()/2+" "+str.substring(0,str.length()/2)+" "+str.substring(str.length()/2+1,str.length()));
+		
+		return false;
+	}
+}

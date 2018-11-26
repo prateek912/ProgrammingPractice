@@ -1,0 +1,43 @@
+package com.java.test;
+
+import java.util.Scanner;
+
+import com.java.fastIO.InputReader;
+import com.java.fastIO.OutputWriter;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		//Scanner sc = new Scanner(System.in);
+		
+		InputReader reader = new InputReader(System.in);
+		OutputWriter writer = new OutputWriter(System.out);
+		
+		//int size = sc.nextInt();
+		int size = reader.readInt();
+		
+		
+		int firstArr[] = new int[size];
+		int secArr[] = new int[size];
+		
+		//int finalArr[] = new int[size];
+		
+		for (int i = 0; i < firstArr.length; i++) {
+			//int temp = sc.nextInt();
+			int temp = reader.readInt();
+			firstArr[i] = temp;
+		}
+		
+		for (int i = 0; i < secArr.length; i++) {
+			int temp = reader.readInt();
+			int value = firstArr[i];
+			writer.write(temp+value+" ");
+		}
+		
+		/*for(int i : finalArr) {
+			//System.out.print(i+" ");
+			writer.write(i+" ");
+		}*/
+		
+	}
+}

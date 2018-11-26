@@ -1,0 +1,27 @@
+package com.circularQueue.prac;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int times = sc.nextInt();
+		
+		
+		while(times > 0) {
+			String str = sc.next();
+			int element = sc.nextInt();
+			
+			if("E".equalsIgnoreCase(str)) {
+				pushToQueue();
+			}else if("D".equalsIgnoreCase(str)) {
+				popFromQueue();
+			}
+			
+			
+			times--;
+		}
+	}
+
+}

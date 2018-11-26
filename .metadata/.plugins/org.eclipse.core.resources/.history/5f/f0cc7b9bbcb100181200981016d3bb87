@@ -1,0 +1,40 @@
+package com.java.test;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String str = sc.next();
+		char[] ch = str.toCharArray();
+		int temp = 0;
+		int count =0;
+		for(int i=0; i<ch.length; i++) {
+			
+			boolean flag = false;
+			if(ch[i] == 'a' || ch[i] == 'e' || ch[i] == 'i' || ch[i] == 'o' || ch[i] == 'u' ) {
+				System.out.println("vowel");
+				flag = true;
+			}else {
+				flag = false;
+			}
+			
+			if(flag) {
+				count++;
+				System.out.println("Incrementing variable :"+count);
+				if(count > temp) {
+					temp = count;
+					System.out.println("Assigning max value to temp :"+temp);
+				}
+			}else {
+				count = 0;
+			}
+			
+		}
+		
+		System.out.println(temp);
+		
+	}
+}

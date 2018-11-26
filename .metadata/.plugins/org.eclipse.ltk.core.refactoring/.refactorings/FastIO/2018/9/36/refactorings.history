@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.java.fastIO&apos; to &apos;SampleTests/src&apos;&#x0D;&#x0A;- Original project: &apos;FastIO&apos;&#x0D;&#x0A;- Destination element: &apos;SampleTests/src&apos;&#x0D;&#x0A;- Original element: &apos;FastIO/src/com.java.fastIO&apos;" description="Copy package" destination="=SampleTests/src" element1="/src&lt;com.java.fastIO" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1536131283135" version="1.0"/>
+</session>

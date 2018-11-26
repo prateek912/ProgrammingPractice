@@ -1,0 +1,48 @@
+package com.java.test;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int testcases = sc.nextInt();
+		StringBuilder sb = new StringBuilder();
+		while(testcases > 0) {
+			String str = sc.next();
+			int len = str.length();
+			sb.append(checkPalindrome(str,len)+" ");
+			testcases--; 
+		}
+		
+		// Printing String with whitespace separated
+		String[] result = sb.toString().split(" ");
+	}
+	
+	public static String checkPalindrome(String str, int len) {
+		
+		String str1 = "";
+		String str2 = "";
+		
+		if(len % 2 == 0) {
+			 str1 = str.substring(0,len/2);
+			 str2 = str.substring(len/2,len);
+			
+			if(str1.equals(str2)) {
+				return "YES EVEN";
+			}else {
+				return "NO";
+			}
+			
+		}else {
+			 str1 = str.substring(0,len/2);
+			 str2 = str.substring(len/2+1,len);
+			
+			if(str1.equals(str2)) {
+				return "YES ODD";
+			}else {
+				return "NO";
+			}
+		}
+	}
+}

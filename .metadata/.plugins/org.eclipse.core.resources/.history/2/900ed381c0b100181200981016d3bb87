@@ -1,0 +1,54 @@
+package com.java.test;
+
+import com.java.fastIO.InputReader;
+
+public class Main {
+	
+	static char[] arr=new char[]{'a','e','i','o','u'};
+	
+	public static void main(String[] args) {
+		
+		//Scanner sc = new Scanner(System.in);
+		
+		InputReader reader = new InputReader(System.in);
+		String str = reader.readString();
+		char[] ch = str.toCharArray();
+		int temp=0,count=0,i=0;
+		
+		while(i<ch.length) {
+			
+			boolean flag = false;
+			if(isVowel(ch[i])) {
+				flag = true;
+			}else {
+				flag = false;
+			}
+			
+			if(flag) {
+				count++;
+				//System.out.println("Incrementing variable :"+count);
+				if(count > temp) {
+					temp = count;
+					//System.out.println("Assigning max value to temp :"+temp);
+				}
+			}else {
+				count = 0;
+			}
+			i++;
+		}
+		
+		System.out.println(temp);
+		
+	}
+	
+	public static boolean isVowel(char c) {
+		boolean flag = false;
+		for(char ch : arr) {
+			if(ch == c) {
+				flag = true;
+				 break;
+			}
+		}
+		return flag;
+	}
+}

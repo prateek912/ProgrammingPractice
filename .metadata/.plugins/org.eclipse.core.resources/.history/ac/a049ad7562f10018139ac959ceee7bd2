@@ -1,0 +1,112 @@
+package hackerEarthProblems;
+
+import java.util.Scanner;
+
+import com.java.fastIO.InputReader;
+
+public class MonkandPrisonerofAzkaban {
+
+	public static void main(String[] args) {
+		InputReader reader = new InputReader(System.in); 
+		int size = reader.readInt();
+		int top=0;
+		
+		long[] array = new long[size];
+		for (int i = 0; i < array.length; i++) {
+			long element = reader.readLong();
+			
+			if(top == 0) {
+				//push element to stack, if array is empty
+				pushToStack(array,top,element);
+				top++;
+					
+			}else {
+				// Keep popping from stack until greater element found
+				long[] tempArray = array;
+				int tempTop = top;
+				keepPopping(tempArray,tempTop,element);
+			}
+			
+		}
+	
+		
+	}
+	
+	public static void pushToStack(long[] array,int top, long element) {
+		// Check if stack is not full already
+		if(top != array.length-1) {
+			array[top] = element;
+		}else {
+			System.out.println("Stack is full!!");
+		}
+	}
+	
+	public static int keepPopping(long[] array, int top, long element) {
+		
+		if(top == 0) {
+			return -1;
+		}
+		
+		if(array[top] > element) {
+			return top;
+		}
+		
+		keepPopping(array, top, element);
+		
+	}
+	
+	
+	
+	
+	
+	/*	
+	for (int i = 0; i < array.length; i++) {
+		int x = 0;
+		int y = 0;
+		// Finding value of x 
+		if(i > rear) {
+			boolean flag = true;
+			for(int j = i-1; j > -1; j--) {
+				//System.out.println("Value of J :"+j);
+				//System.out.println("Comparing for x :"+array[j]+" and :"+array[i]);
+				if(array[j] > array[i]) {
+					x = j+1;
+					flag= false;
+					break;
+				}
+			}
+			if(flag) {
+				x = -1;
+			}
+		}else {
+			//System.out.println("I smaller than rear and value of i is :"+i);
+			x = -1;
+		}
+		
+		// Finding value of y
+		if(front > i) {
+			boolean flag = true;
+			for(int j=i+1; front > j;j++) {
+				//System.out.println("Value of J :"+j);
+				//System.out.println("Comparing for y :"+array[j]+" and :"+array[i]);
+				if(array[j] > array[i]) {
+					y = j+1;
+					flag= false;
+					break;
+				}
+			}
+			if(flag) {
+				y = -1;
+			}
+		}else {
+			//System.out.println("I Greater than front and value of i is :"+i);
+			y = -1;
+		}
+		
+		//System.out.println("Value of x :"+x+" and y :"+y);
+		System.out.print((x+y)+" ");
+		
+	}
+	*/
+
+}

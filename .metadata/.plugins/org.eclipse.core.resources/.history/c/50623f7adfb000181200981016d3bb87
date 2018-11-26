@@ -1,0 +1,14 @@
+package com.java.test;
+
+import java.util.Scanner;
+
+import com.java.fastIO.InputReader;
+import com.java.fastIO.OutputWriter;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+	}
+}

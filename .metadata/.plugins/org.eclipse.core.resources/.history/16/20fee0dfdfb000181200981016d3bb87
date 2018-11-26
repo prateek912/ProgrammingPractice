@@ -1,0 +1,20 @@
+package com.java.test;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int testcases = sc.nextInt();
+		
+		while(testcases > 0) {
+			boolean flag = false;
+			String str = sc.next();
+			
+			checkPalindrome(str);
+			
+			testcases--; 
+		}
+	}
+}

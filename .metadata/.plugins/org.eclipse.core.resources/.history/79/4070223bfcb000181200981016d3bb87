@@ -1,0 +1,59 @@
+package com.java.test;
+
+import java.io.PrintWriter;
+
+import com.java.fastIO.InputReader;
+import com.java.fastIO.OutputWriter;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		//Scanner sc = new Scanner(System.in);
+		InputReader reader = new InputReader(System.in);
+		OutputWriter writer = new OutputWriter(System.out);
+		int testcases = reader.readInt();
+		StringBuilder sb = new StringBuilder();
+		while(testcases > 0) {
+			String str = reader.readString();
+			int len = str.length();
+			sb.append(checkPalindrome(str,len)+"//");
+			testcases--; 
+		}
+		
+		
+		// Printing String with whitespace separated
+		String[] result = sb.toString().split("//");
+		for(String str : result) {
+			writer.write(str+"\n");
+		}
+	}
+	
+	public static String checkPalindrome(String str, int len) {
+		 
+		if(len % 2 == 0) {
+			if(palindrome(str)) {
+				return "YES EVEN";
+			}else {
+				return "NO";
+			}
+		}else {
+			if(palindrome((str))) {
+				return "YES ODD";
+			}else {
+				return "NO";
+			}
+		}
+	}
+	
+	public static boolean palindrome(String str) {
+		char[] ch = str.toCharArray();
+		int i=0,j=a.length-1;
+	    while(i<j){
+	        if(a[i]!=a[j])
+	            return false;
+	       i++;
+	       j--;
+	    }
+	    return true;
+	}
+}

@@ -1,0 +1,82 @@
+package com.pratice.stack;
+
+import java.util.Scanner;
+
+public class Main {
+
+	static char[] parantheseArray = null;
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		String str = sc.next();
+		
+		char[] chArr = str.toCharArray();
+		//TODO: Can be improved 
+		parantheseArray = new char[chArr.length];
+		
+		// For TOP element
+		int top = 0;
+		
+		for(char c : chArr) {
+			if(checkOpenParantheses(c)) {
+				pushOperation(c,top);
+				top++;
+			}else if(checkCloseParantheses(c)) {
+				popOperation(c,top);
+				top--;
+			}
+		}
+		
+		System.out.println("Size of Array :"+parantheseArray.length);
+	}
+	
+	public static void pushOperation(char c,int top) {
+		// Checking if stack is not full first
+		if(top != (parantheseArray.length-1)) {
+			parantheseArray[top] = c;
+			System.out.println("Pussed Value :"+parantheseArray[top]);
+		}
+	}
+	
+	public static void popOperation(char c,int top) {
+		// Checking if stack is empty or not
+		if(top < 0) {
+			char temp = parantheseArray[top];
+			System.out.println("Popped Value :"+temp);
+		}
+	}
+	
+	public static boolean checkOpenParantheses(char c) {
+			switch(c) {
+				case '{' :
+					return true;
+						
+				case '[' :
+					return true;
+			
+				case '(' :
+					return true;
+				
+				default :
+					return false;
+			}
+	}
+	
+	public static boolean checkCloseParantheses(char c) {
+		switch(c) {
+			case '}' :
+				return true;
+					
+			case ']' :
+				return true;
+		
+			case ')' :
+				return true;
+			
+			default :
+				return false;
+		}
+}
+	
+}

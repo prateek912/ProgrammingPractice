@@ -1,0 +1,38 @@
+package com.circularQueue.prac;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int times = sc.nextInt();
+		int[] queue = new int[times];
+		
+		int front = 0;
+		int rear = 0;
+		
+		while(times > 0) {
+			String str = sc.next();
+			int element = sc.nextInt();
+			
+			if("E".equalsIgnoreCase(str)) {
+				pushToQueue(element,rear,queue.length);
+			}else if("D".equalsIgnoreCase(str)) {
+				popFromQueue(front,rear);
+			}
+			
+			times--;
+		}
+	}
+	
+	public static void pushToQueue(int element, int rear, int front, int size) {
+		// Check to see if Queue is full
+		if(rear != size) {
+			
+		}else {
+			System.out.println("Queue is OverFlowed!!");
+		}
+	}
+
+}

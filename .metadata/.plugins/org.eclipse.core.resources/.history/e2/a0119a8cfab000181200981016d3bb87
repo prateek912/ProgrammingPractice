@@ -1,0 +1,71 @@
+package com.java.test;
+
+import java.io.PrintWriter;
+
+import com.java.fastIO.InputReader;
+import com.java.fastIO.OutputWriter;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		//Scanner sc = new Scanner(System.in);
+		InputReader reader = new InputReader(System.in);
+		OutputWriter writer = new OutputWriter(System.out);
+		int testcases = reader.readInt();
+		StringBuilder sb = new StringBuilder();
+		while(testcases > 0) {
+			String str = reader.readString();
+			int len = str.length();
+			sb.append(checkPalindrome(str,len)+"//");
+			testcases--; 
+		}
+		
+		
+		// Printing String with whitespace separated
+		String[] result = sb.toString().split("//");
+		for(String str : result) {
+			writer.write(str+"\n");
+		}
+	}
+	
+	public static String checkPalindrome(String str, int len) {
+		
+		String str1 = "";
+		StringBuilder sb = new StringBuilder();
+		str1 = str.substring(0,len/2);
+		 
+		if(len % 2 == 0) {
+			sb.append(str.substring(len/2,len));
+			
+			if(palindrome(str)) {
+				return "YES EVEN";
+			}else {
+				return "NO";
+			}
+			
+		}else {
+			 sb.append(str.substring(len/2+1,len));
+			
+			if(palindrome((str))) {
+				return "YES ODD";
+			}else {
+				return "NO";
+			}
+		}
+	}
+	
+	public boolean palindrome(String str) {
+		char[] ch = str.toCharArray();
+		boolean flag = true;
+		
+		for(int i=0,j=str.length()-1; i<str.length() || j >=0; i++, j--) {
+			System.out.println("ch[i] :"+ch[i]+" ==  ch[j] :"+ch[j]);
+			if(ch[i] != ch[j]) {
+				flag = false;
+				break;
+			}
+		}
+		
+		return flag;
+	}
+}

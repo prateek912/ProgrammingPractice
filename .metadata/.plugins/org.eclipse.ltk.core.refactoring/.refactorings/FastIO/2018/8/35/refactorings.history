@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.java.fastIO.OutputWritter.java&apos; to &apos;OutputWriter.java&apos;&#x0D;&#x0A;- Original project: &apos;FastIO&apos;&#x0D;&#x0A;- Original element: &apos;com.java.fastIO.OutputWritter.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.java.fastIO.OutputWriter.java&apos;" description="Rename compilation unit &apos;OutputWritter.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.java.fastIO{OutputWritter.java" name="OutputWriter.java" references="false" stamp="1535698475532" version="1.0"/>
+</session>

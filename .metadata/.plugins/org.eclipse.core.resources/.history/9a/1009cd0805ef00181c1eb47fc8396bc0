@@ -1,0 +1,18 @@
+package hackerEarthProblems;
+
+import java.util.Scanner;
+
+public class MonkandChamberofSecrets {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int numberOfSpider = sc.nextInt();
+		int spiderToBeSelected = sc.nextInt();
+		
+		int[] initialQueue = new int[numberOfSpider];
+		for (int i = 0; i < initialQueue.length; i++) {
+			initialQueue[i] = sc.nextInt();
+		}
+	}
+
+}

@@ -1,0 +1,57 @@
+package hackerEarthProblems;
+
+import java.util.Scanner;
+
+public class MonkandPhilosophersStone {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int numberOfCoin = sc.nextInt();
+		
+		int[] harryBag = new int[numberOfCoin];
+		int[] monkBag = new int[numberOfCoin];
+		
+		for (int i = 0; i < harryBag.length; i++) {
+			harryBag[i] = sc.nextInt();
+		}
+			
+		int repeatTimes = sc.nextInt();
+		int totalAmount = sc.nextInt();
+		int harryBagCoin = 0;
+		int top = 0;
+		int monkBagTotal = 0;
+		
+		while(repeatTimes > 0) {
+			
+			String str = sc.next();
+			if("Harry".equalsIgnoreCase(str)) {
+				// Take first coin present and throw to monk bag
+				int thowCoinToMonk = harryBag[harryBagCoin];
+				//monkBagTotal = monkBagTotal+thowCoinToMonk;
+				// Store this coin in Monk Bag
+				if(monkBagTotal != totalAmount) {
+					monkBagTotal=pushToMonkBag(thowCoinToMonk,top,numberOfCoin,monkBag);
+					top++;
+				}else {
+					// Finish this loop
+				}
+				harryBagCoin++;
+			}else if("Remove".equalsIgnoreCase(str)) {
+				// Remove the last entered coin from monk bag
+				int removedCoin=popFromMonkBag(top,numberOfCoin,monkBag);
+				monkBagTotal = monkBagTotal - removedCoin;
+			}
+			
+			repeatTimes--;
+		}
+		
+	}
+
+	public static void pushToMonkBag(int coin,int top, int size, int[] stack) {
+		// Check if it is already full 
+		if(top != size) {
+			stack[top] = coin;
+		}
+	}
+	
+}
