@@ -1,11 +1,11 @@
-package hackerEarthProblems;
+package com.java.prac;
 
 import com.java.fastIO.InputReader;
 
 import java.util.Stack;
 
-public class MonkAndGobletOfFire {
-    static Stack<Long> stack = new Stack<>();
+public class OptimizeMonkAndGobletOfFire {
+    //static Stack<Long> stack = new Stack<>();
 
     public static void main(String args[]){
         InputReader reader = new InputReader(System.in);
@@ -18,6 +18,8 @@ public class MonkAndGobletOfFire {
         MyDataStructure FOUR = new MyDataStructure(repetition);
         // Main queue, that will hold school Numbers
         MyDataStructure MAIN = new MyDataStructure(repetition);
+        // This and MAIN Queue will get Combine at last
+        MyDataStructure extra_QUEUE = new MyDataStructure(repetition);
 
         // Queue, this will store school Number
         // For above queue
@@ -44,41 +46,69 @@ public class MonkAndGobletOfFire {
                     insertToQueue(FOUR,rollNumber,"Four");
                 }
 
-                // Inserting School Number in main queue
-                if(!isEmpty(MAIN)) {
-                    //  System.out.println("Position of rear from MAIN before traversing :" + MAIN.getRear());
-                    int temp = MAIN.getRear();
-                    long[] queue = MAIN.getRollNumbeQueue();
-                    while (temp > MAIN.getFront()) {
-                        if (queue[temp] != schoolNumber) {
-                            // Pop from main queue
-                            long removed = deleteFromQueueRear(MAIN, "From Main Queue");
-                            // System.out.println("Removed from Main queue to stack :" + removed);
-                            stack.add(removed);
-                        } else {
-                            stack.add(queue[temp]);
-                            break;
+                /*** For Optimization ***/
+                if(isEmpty(extra_QUEUE)){
+                    // Then check in MAIN Queue from REAR side
+                    if(!isEmpty(MAIN)){
+                        int temp = MAIN.getRear();
+                        long[] queue = MAIN.getRollNumbeQueue();
+                        while (temp > MAIN.getFront()) {
+                            if (queue[temp] != schoolNumber) {
+                                // Pop from main queue
+                                long removed = deleteFromQueueRear(MAIN, "From Main Queue");
+                                // System.out.println("Removed from Main queue to stack :" + removed);
+                                insertToQueue(extra_QUEUE,removed,"From Main Queue to extra Queue");
+                            } else {
+                                insertToQueue(extra_QUEUE,queue[temp],"From Main Queue to extra Queue");
+                                break;
+                            }
+                            temp--;
                         }
-                        temp--;
+                    }else{
+                        // Then insert into MAIN Queue from Rear Side
+                        insertToQueue(MAIN,schoolNumber,"Inserting at start of Main Queue");
                     }
-
-                    // Add everything back from stack to Queue
-                    while (!stack.isEmpty()) {
-                        long element = stack.peek();
-                        insertToQueue(MAIN, element, "Main Queue from stack");
-                        stack.pop();
-                    }
-                    if (temp ==  MAIN.getFront()){
-                        insertToQueue(MAIN, schoolNumber, "Inserting at the end of Main Queue");
-                    }
-
                 }else{
-                    insertToQueue(MAIN,schoolNumber,"Inserting at start of Main Queue");
+                    // Same thing as above, but this time i have to start checking from FRONT Side, as that will be end of Final Queue
+                    int temp_front = extra_QUEUE.getFront()+1;
+                    long[] queue = extra_QUEUE.getRollNumbeQueue();
+                    while(temp_front <= extra_QUEUE.getRear()){
+                        if(queue[temp_front] != schoolNumber){
+                            // Do nothing, keep going
+                        }else{
+                            // Start moving element from extra_Queue to Main Queue till matched element
+                            int temp_rear = extra_QUEUE.getRear();
+                            while(temp_rear >= temp_front){
+                                // Keep moving from extra Queue to MAIN queue
+                                long removed = deleteFromQueueRear(extra_QUEUE,"From extra_Queue to MAIN Queue");
+                                insertToQueue(MAIN,removed,"To the MAIN Queue");
+                                temp_rear--;
+                            }
+                            insertToQueue(extra_QUEUE,schoolNumber,"Moving matched element at last of extra Queue!!");
+                        }
+                        temp_front++;
+                    }
+
+                    // If nothing matched then, put whole extra_Queue to Main Queue
+                    if(temp_front > extra_QUEUE.getRear()){
+                        // Put whole extra Queue to Main Queue
+                        while(!isEmpty(extra_QUEUE)){
+                            long element = deleteFromQueueRear(extra_QUEUE,"From rear side of extra queue");
+                            insertToQueue(MAIN,element,"Not Matched so putting one by one..");
+                        }
+                        insertToQueue(MAIN,schoolNumber,"Moving NON matched element at last of Main Queue!!");
+                    }
                 }
 
             }else if('D' == operation){
                 // Deletion
-                removedSchoolNumber = deleteFromQueueFront(MAIN,"Main Queue");
+                if(!isEmpty(MAIN)){
+                    removedSchoolNumber = deleteFromQueueFront(MAIN,"Main Queue");
+                }else{
+                    // Take it from extra Queue
+                    removedSchoolNumber =deleteFromQueueFront(extra_QUEUE,"Main Queue");
+                }
+
                 //  System.out.println("Removed Element on Pressing D :"+removedSchoolNumber);
                 if(removedSchoolNumber == 1){
                     removedRollNumber = deleteFromQueueFront(ONE,"One");
