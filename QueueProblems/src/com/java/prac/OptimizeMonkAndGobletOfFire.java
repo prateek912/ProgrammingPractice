@@ -49,6 +49,7 @@ public class OptimizeMonkAndGobletOfFire {
                 /*** For Optimization ***/
                 if(isEmpty(extra_QUEUE)){
                     // Then check in MAIN Queue from REAR side
+                    boolean isMatched = false;
                     if(!isEmpty(MAIN)){
                         int temp = MAIN.getRear();
                         long[] queue = MAIN.getRollNumbeQueue();
@@ -60,10 +61,25 @@ public class OptimizeMonkAndGobletOfFire {
                                 insertToQueue(extra_QUEUE,removed,"From Main Queue to extra Queue");
                             } else {
                                 insertToQueue(extra_QUEUE,queue[temp],"From Main Queue to extra Queue");
+                                isMatched = true;
                                 break;
                             }
                             temp--;
                         }
+
+                        // If Nothing matches then Put whole extra_Queue to MAIN Queue
+                        if(temp >= MAIN.getFront() ){
+                            if(!isMatched){
+                                while(!isEmpty(extra_QUEUE)){
+                                    while(!isEmpty(extra_QUEUE)){
+                                        long element = deleteFromQueueRear(extra_QUEUE,"From rear side of extra queue");
+                                        insertToQueue(MAIN,element,"Not Matched so putting one by one..");
+                                    }
+                                    insertToQueue(MAIN,schoolNumber,"Moving NON matched element at last of Main Queue!!");
+                                }
+                            }
+                        }
+
                     }else{
                         // Then insert into MAIN Queue from Rear Side
                         insertToQueue(MAIN,schoolNumber,"Inserting at start of Main Queue");
@@ -89,14 +105,36 @@ public class OptimizeMonkAndGobletOfFire {
                         temp_front++;
                     }
 
-                    // If nothing matched then, put whole extra_Queue to Main Queue
                     if(temp_front > extra_QUEUE.getRear()){
-                        // Put whole extra Queue to Main Queue
-                        while(!isEmpty(extra_QUEUE)){
-                            long element = deleteFromQueueRear(extra_QUEUE,"From rear side of extra queue");
-                            insertToQueue(MAIN,element,"Not Matched so putting one by one..");
+                        // Mow we will search in MAIN Queue for matching element
+                        int main_temp_rear = MAIN.getRear();
+                        boolean isMatched = false;
+                        long[] main_queue = MAIN.getRollNumbeQueue();
+                        while(main_temp_rear > MAIN.getFront()){
+                            if(main_queue[main_temp_rear] != schoolNumber){
+                                long removed = deleteFromQueueRear(MAIN,"From MAIN rear..");
+                                insertToQueue(extra_QUEUE,removed,"To extra Queue..");
+                            }else{
+                                // If Matched then insert into MAIN Queue last
+                                insertToQueue(MAIN,schoolNumber,"MAtched element to MAIN ..");
+                                isMatched = true;
+                                break;
+                            }
+                            main_temp_rear--;
                         }
-                        insertToQueue(MAIN,schoolNumber,"Moving NON matched element at last of Main Queue!!");
+
+                        // If still nothing matched then put entire extra Queue to Main Queue
+                        if(main_temp_rear >= MAIN.getFront() ){
+                            if(!isMatched){
+                                while(!isEmpty(extra_QUEUE)){
+                                    while(!isEmpty(extra_QUEUE)){
+                                        long element = deleteFromQueueRear(extra_QUEUE,"From rear side of extra queue");
+                                        insertToQueue(MAIN,element,"Not Matched so putting one by one..");
+                                    }
+                                    insertToQueue(MAIN,schoolNumber,"Moving NON matched element at last of Main Queue!!");
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -106,7 +144,7 @@ public class OptimizeMonkAndGobletOfFire {
                     removedSchoolNumber = deleteFromQueueFront(MAIN,"Main Queue");
                 }else{
                     // Take it from extra Queue
-                    removedSchoolNumber =deleteFromQueueFront(extra_QUEUE,"Main Queue");
+                    removedSchoolNumber =deleteFromQueueRear(extra_QUEUE,"Main Queue");
                 }
 
                 //  System.out.println("Removed Element on Pressing D :"+removedSchoolNumber);
