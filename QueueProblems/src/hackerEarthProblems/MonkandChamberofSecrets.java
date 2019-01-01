@@ -20,7 +20,7 @@ public class MonkandChamberofSecrets {
 		while(spiderToBeSelected > 0) {
 			
 			if(spiderToBeSelected == 0) {
-				// Checking size of queue is greater or less than number to be deque
+				// Checking size of queue is greater or less than number to be dequeue
 				if(initialQueue.length > numberOfSpider) {
 					// Putting in a different queue and finding highest power
 					int highestPower = 0;

@@ -1,11 +1,20 @@
 package hackerEarthProblems;
 
+<<<<<<< HEAD
+import java.util.Stack;
+
+import com.java.fastIO.InputReader;
+
+public class MonkAndGobletOfFire {
+	static Stack<Long> stack = new Stack<>();
+=======
 import com.java.fastIO.InputReader;
 
 import java.util.Stack;
 
 public class MonkAndGobletOfFire {
     static Stack<Long> stack = new Stack<>();
+>>>>>>> faddc9ee5d0fb65b6334da4102b9c938066ffe4b
 
     public static void main(String args[]){
         InputReader reader = new InputReader(System.in);
@@ -18,6 +27,10 @@ public class MonkAndGobletOfFire {
         MyDataStructure FOUR = new MyDataStructure(repetition);
         // Main queue, that will hold school Numbers
         MyDataStructure MAIN = new MyDataStructure(repetition);
+<<<<<<< HEAD
+        MyDataStructure extra_Queue = new MyDataStructure(repetition);
+=======
+>>>>>>> faddc9ee5d0fb65b6334da4102b9c938066ffe4b
 
         // Queue, this will store school Number
         // For above queue
@@ -44,6 +57,81 @@ public class MonkAndGobletOfFire {
                     insertToQueue(FOUR,rollNumber,"Four");
                 }
 
+<<<<<<< HEAD
+               
+                if(isEmpty(extra_Queue)) {
+                	if(!isEmpty(MAIN)) {
+                		int temp = MAIN.getRear();
+                		long[] queue = MAIN.getRollNumbeQueue();
+                		while(temp > MAIN.getFront()) {
+                			if(queue[temp] != schoolNumber) {
+                				long removed = deleteFromQueueRear(MAIN, "Removing from MAIN Rear, to insert in Extra Queue");
+                				insertToQueue(extra_Queue, removed, "From MAIN to Extra Queue...");
+                			}else {
+                				insertToQueue(MAIN, schoolNumber, "Matched Element to Extra Queue");
+                				break;
+                			}	
+                			temp--;
+                		}
+                		if(temp > MAIN.getFront()) {
+                			insertToQueue(MAIN, schoolNumber, "Insert to Main..");
+                		}
+                	}else {
+                		insertToQueue(MAIN, schoolNumber, "To the Main Queue...");
+                	}
+                }else {
+                	int temp_front = extra_Queue.getFront()+1;
+                	long[] queue = extra_Queue.getRollNumbeQueue();
+                	boolean matched = false;
+                	while(temp_front <= extra_Queue.getRear()) {
+                		if(queue[temp_front] == schoolNumber ) {
+                			matched= true;
+                			int temp_rear = extra_Queue.getRear();
+                			while(temp_rear > temp_front) {
+                				long removed = deleteFromQueueRear(extra_Queue, "Removing element from extra_Queue while matching..");
+                    			insertToQueue(MAIN, removed, "From extra_Queue to MAIN...");
+                    			temp_rear--;
+                			}
+                			insertToQueue(extra_Queue, schoolNumber,"Matched element to extra_Queue..");
+                			break;
+                		}
+                		temp_front++;
+                	}
+                	
+                	// That means element not found in extra_Queue, now we will check in Main Queue
+                	if(!matched) {
+                		// Check if MAIN is empty or not
+                		if(!isEmpty(MAIN)) {
+                			// Same Code again
+                			int temp = MAIN.getRear();
+                    		long[] queue1 = MAIN.getRollNumbeQueue();
+                    		while(temp > MAIN.getFront()) {
+                    			if(queue1[temp] != schoolNumber) {
+                    				long removed = deleteFromQueueRear(MAIN, "Removing from MAIN Rear, to insert in Extra Queue");
+                    				insertToQueue(extra_Queue, removed, "From MAIN to Extra Queue...");
+                    			}else {
+                    				insertToQueue(MAIN, schoolNumber, "Matched Element to Extra Queue");
+                    				break;
+                    			}	
+                    			temp--;
+                    		}
+                		}else {
+                			// If MAIN Queue is empty then,we have to copy everything from extra Queue to Main and then put 
+                			// new element at last
+                			int extra_queue_rear = extra_Queue.getRear();
+                			while(extra_queue_rear != extra_Queue.getFront()) {
+                				// Move everything to MAIN
+                				long removed = deleteFromQueueRear(extra_Queue, "Transfering to MAIN Queue..");
+                				insertToQueue(MAIN, removed, "From MAin to extra...");
+                				extra_queue_rear--;
+                			}
+                			
+                			// At last we will put element in extra_qeueu
+                			insertToQueue(extra_Queue, schoolNumber, "After transfering everythig..");
+                		}
+                	}
+                	
+=======
                 // Inserting School Number in main queue
                 if(!isEmpty(MAIN)) {
                     //  System.out.println("Position of rear from MAIN before traversing :" + MAIN.getRear());
@@ -74,6 +162,7 @@ public class MonkAndGobletOfFire {
 
                 }else{
                     insertToQueue(MAIN,schoolNumber,"Inserting at start of Main Queue");
+>>>>>>> faddc9ee5d0fb65b6334da4102b9c938066ffe4b
                 }
 
             }else if('D' == operation){
@@ -160,7 +249,11 @@ public class MonkAndGobletOfFire {
             currentObjectFront++;
             removedElement = tempQueue[currentObjectFront];
 
+<<<<<<< HEAD
+            // Setting new value to Current Object
+=======
             // Setting new value to Curren Object
+>>>>>>> faddc9ee5d0fb65b6334da4102b9c938066ffe4b
             ds.setFront(currentObjectFront);
             ds.setRollNumbeQueue(tempQueue);
         }else{
@@ -170,3 +263,45 @@ public class MonkAndGobletOfFire {
     }
 }
 
+<<<<<<< HEAD
+class MyDataStructure{
+    private int rear;
+    private int front;
+    private long[] rollNumbeQueue;
+
+    // Parameter Constructor for initializing long array
+    public MyDataStructure(int size){
+        rollNumbeQueue = new long[size];
+        rear = -1;
+        front = -1;
+    }
+
+    // Getters
+    public int getRear(){
+        return rear;
+    }
+    public int getFront() {
+        return front;
+    }
+    public long[] getRollNumbeQueue() {
+        return rollNumbeQueue;
+    }
+
+    // Setters
+    public void setFront(int front) {
+        this.front = front;
+    }
+    public void setRear(int rear) {
+        this.rear = rear;
+    }
+    public void setRollNumbeQueue(long[] rollNumbeQueue) {
+        this.rollNumbeQueue = rollNumbeQueue;
+    }
+
+    @Override
+    public String toString() {
+        return "Rear :"+rear+" Front :"+front+" RollNumberQueue :"+rollNumbeQueue.toString();
+    }
+}
+=======
+>>>>>>> faddc9ee5d0fb65b6334da4102b9c938066ffe4b
