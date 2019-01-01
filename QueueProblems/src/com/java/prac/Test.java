@@ -1,11 +1,12 @@
 package com.java.prac;
 
+import java.math.BigInteger;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
 public class Test {
     public static void main(String args[]){
-        Queue<Integer> queue = new ArrayDeque<>();
+        System.out.println(Math.ceil(1));;
     }
 
 }

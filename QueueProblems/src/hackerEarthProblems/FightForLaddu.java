@@ -1,21 +1,24 @@
 package hackerEarthProblems;
 
+import com.java.fastIO.InputReader;
+
 import java.util.*;
 
 public class FightForLaddu {
     public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-        int repetition = sc.nextInt();
+        InputReader reader = new InputReader(System.in);
+        int repetition = reader.readInt();
+
         while(repetition > 0){
 
-            int size = sc.nextInt();
+            int size = reader.readInt();
             long[] arr = new long[size];
             long[] arrFreq = new long[size];
 
             Map<Long,Integer> map = new HashMap<>();
 
             for(int i=0;i<arr.length;i++){
-                arr[i] = sc.nextInt();
+                arr[i] = reader.readLong();
                 if(map.containsKey(arr[i])){
                     int temp = map.get(arr[i]);
                     map.put(arr[i],++temp);
@@ -23,43 +26,41 @@ public class FightForLaddu {
                     map.put(arr[i],1);
                 }
             }
-
-            // Making Frequency Array for all element
-            for(int i=0;i<arr.length;i++){
-                arrFreq[i] = map.get(arr[i]);
-            }
-
-           /* for(long i : arrFreq){
-                System.out.print(i+" ");
-            }*/
-
             // Have to Find out NGE in Frequency
             Stack<Long> stack = new Stack<>();
-            int[] nge = new int[size];
-
-            for(int i=arr.length-1; i >=0; i--) {
+            Stack<Integer> indexStack = new Stack<>();
+            Stack<Integer> finalStack = new Stack<>();
+            int tempIndex = 0;
+            // Making Frequency Array for all element
+            for(int i=arr.length-1;i>=0;i--){
+                arrFreq[i] = map.get(arr[i]);
                 long element = arrFreq[i];
-                int temp = i;
+
                 if (!stack.isEmpty()) {
                     while (!stack.isEmpty() && stack.peek() <= element) {
                         stack.pop();
-                        temp++;
+                        indexStack.pop();
+
                     }
                 }
-                nge[i] = stack.isEmpty() ? -1 : (temp + 1);
-                stack.push(element);
-            }
 
-            System.out.println();
-            for(int i=0;i<nge.length;i++){
-                if(nge[i] == -1){
-                    System.out.print(-1+" ");
+                if(stack.isEmpty()){
+                    finalStack.add(-1);
                 }else{
-                    System.out.print(arr[nge[i]]+" ");
+                    finalStack.add((int)arr[indexStack.peek()]);
                 }
 
+                stack.push(element);
+                indexStack.push(i);
+
+
             }
 
+            StringBuilder sb = new StringBuilder();
+            while(!finalStack.isEmpty()){
+                sb.append(finalStack.pop()+" ");
+            }
+            System.out.println(sb);
 
             repetition--;
         }

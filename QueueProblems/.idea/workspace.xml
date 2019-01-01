@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4fe4955a-98ae-424a-aafd-a3114cc765c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/java/prac/SeiveOEratosthenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/java/prac/SeiveOEratosthenes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/java/prac/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/java/prac/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hackerEarthProblems/FightForLaddu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hackerEarthProblems/FightForLaddu.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/java/fastIO/InputReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+            <state relative-caret-position="357">
+              <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -30,11 +33,37 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/hackerEarthProblems/FightForLaddu.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hackerEarthProblems/TheConfuesedMonk.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="48" column="58" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="58" />
+            <state relative-caret-position="189">
+              <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#879#880#0" expanded="true" />
+                <element signature="e#917#918#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/hackerEarthProblems/MonkAndDivisible.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hackerEarthProblems/Modula.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="50" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,17 +88,31 @@
         <option value="$PROJECT_DIR$/src/hackerEarthProblems/MyDataStructure.java" />
         <option value="$PROJECT_DIR$/src/hackerEarthProblems/MonkAndGobletOfFire.java" />
         <option value="$PROJECT_DIR$/src/com/java/prac/MyDataStructure.java" />
-        <option value="$PROJECT_DIR$/src/com/java/prac/Test.java" />
         <option value="$PROJECT_DIR$/src/com/java/prac/OptimizeMonkAndGobletOfFire.java" />
         <option value="$PROJECT_DIR$/src/hackerEarthProblems/FrustratedCoder.java" />
         <option value="$PROJECT_DIR$/src/hackerEarthProblems/AGameOfNumber.java" />
-        <option value="$PROJECT_DIR$/src/com/java/prac/SeiveOEratosthenes.java" />
         <option value="$PROJECT_DIR$/src/hackerEarthProblems/ArrayFormation.java" />
         <option value="$PROJECT_DIR$/src/hackerEarthProblems/FightForLaddu.java" />
+        <option value="$PROJECT_DIR$/src/hackerEarthProblems/ChoclateDistribution.java" />
+        <option value="$PROJECT_DIR$/src/hackerEarthProblems/Modula.java" />
+        <option value="$PROJECT_DIR$/src/hackerEarthProblems/GCD.java" />
+        <option value="$PROJECT_DIR$/src/hackerEarthProblems/TheConfuesedMonk.java" />
+        <option value="$PROJECT_DIR$/src/com/java/prac/FindGCD.java" />
+        <option value="$PROJECT_DIR$/src/com/java/prac/GCDOfArray.java" />
+        <option value="$PROJECT_DIR$/src/com/java/prac/ModularExponentiation.java" />
+        <option value="$PROJECT_DIR$/src/com/java/prac/ModularInverseExponentiation.java" />
+        <option value="$PROJECT_DIR$/src/hackerEarthProblems/RiyaBirthday.java" />
+        <option value="$PROJECT_DIR$/src/com/java/prac/SeiveOEratosthenes.java" />
+        <option value="$PROJECT_DIR$/src/hackerEarthProblems/NearestPrime.java" />
+        <option value="$PROJECT_DIR$/src/hackerEarthProblems/HackerDecrypt.java" />
+        <option value="$PROJECT_DIR$/src/com/java/prac/Test.java" />
+        <option value="$PROJECT_DIR$/src/hackerEarthProblems/MonkAndSquareRoot.java" />
+        <option value="$PROJECT_DIR$/src/hackerEarthProblems/MonkAndDivider.java" />
+        <option value="$PROJECT_DIR$/src/hackerEarthProblems/MonkAndDivisible.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -124,6 +167,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -146,11 +190,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544719578332" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546339704052" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -176,9 +219,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FightForLaddu">
-    <configuration name="AGameOfNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hackerEarthProblems.AGameOfNumber" />
+  <component name="RunManager" selected="Application.MonkAndDivisible">
+    <configuration name="HackerDecrypt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hackerEarthProblems.HackerDecrypt" />
       <module name="QueueProblems" />
       <extension name="coverage">
         <pattern>
@@ -190,8 +233,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArrayFormation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hackerEarthProblems.ArrayFormation" />
+    <configuration name="MonkAndDivider" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hackerEarthProblems.MonkAndDivider" />
       <module name="QueueProblems" />
       <extension name="coverage">
         <pattern>
@@ -203,8 +246,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FightForLaddu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hackerEarthProblems.FightForLaddu" />
+    <configuration name="MonkAndDivisible" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hackerEarthProblems.MonkAndDivisible" />
       <module name="QueueProblems" />
       <extension name="coverage">
         <pattern>
@@ -216,8 +259,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FrustratedCoder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hackerEarthProblems.FrustratedCoder" />
+    <configuration name="MonkAndSquareRoot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hackerEarthProblems.MonkAndSquareRoot" />
       <module name="QueueProblems" />
       <extension name="coverage">
         <pattern>
@@ -229,8 +272,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SeiveOEratosthenes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.java.prac.SeiveOEratosthenes" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.java.prac.Test" />
       <module name="QueueProblems" />
       <extension name="coverage">
         <pattern>
@@ -244,11 +287,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FightForLaddu" />
-        <item itemvalue="Application.ArrayFormation" />
-        <item itemvalue="Application.SeiveOEratosthenes" />
-        <item itemvalue="Application.AGameOfNumber" />
-        <item itemvalue="Application.FrustratedCoder" />
+        <item itemvalue="Application.MonkAndDivisible" />
+        <item itemvalue="Application.MonkAndDivider" />
+        <item itemvalue="Application.MonkAndSquareRoot" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.HackerDecrypt" />
       </list>
     </recent_temporary>
   </component>
@@ -272,7 +315,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49801588" visible="true" weight="0.24659607" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49801588" visible="true" weight="0.22314675" />
       <window_info id="Structure" order="1" sideWeight="0.5019841" side_tool="true" weight="0.24962178" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -281,8 +324,8 @@
       <window_info id="Learn" order="6" weight="0.32980332" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.198036" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2618658" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4811784" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -339,17 +382,6 @@
           <folding>
             <element signature="e#6627#6628#0" expanded="true" />
             <element signature="e#6668#6669#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/prac/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#196#197#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -450,13 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/prac/SeiveOEratosthenes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hackerEarthProblems/ArrayFormation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -467,20 +492,152 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/fastIO/InputReader.java">
+    <entry file="file://$PROJECT_DIR$/src/hackerEarthProblems/FightForLaddu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        <state relative-caret-position="323">
+          <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hackerEarthProblems/FightForLaddu.java">
+    <entry file="file://$PROJECT_DIR$/src/hackerEarthProblems/ChoclateDistribution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="48" column="58" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="58" />
+        <state relative-caret-position="322">
+          <caret line="57" column="40" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/prac/FindGCD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="12" column="45" lean-forward="true" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hackerEarthProblems/GCD.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/java/prac/GCDOfArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/prac/ModularExponentiation.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/prac/ModularInverseExponentiation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hackerEarthProblems/NearestPrime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="68" column="29" lean-forward="true" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/prac/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_191/src.zip!/java/lang/Math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-369">
+          <caret line="337" column="29" selection-start-line="337" selection-start-column="25" selection-end-line="337" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hackerEarthProblems/MonkAndSquareRoot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="31" column="43" lean-forward="true" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hackerEarthProblems/HackerDecrypt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/prac/SeiveOEratosthenes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hackerEarthProblems/MonkAndDivider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/fastIO/InputReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hackerEarthProblems/TheConfuesedMonk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#879#880#0" expanded="true" />
+            <element signature="e#917#918#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hackerEarthProblems/RiyaBirthday.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hackerEarthProblems/Modula.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="50" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hackerEarthProblems/MonkAndDivisible.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
         </state>
       </provider>
     </entry>
