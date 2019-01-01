@@ -3638,6 +3638,7 @@ java.net.UnknownHostException: download.eclipse.org
 
 !ENTRY org.eclipse.jface.text 2 0 2018-11-26 12:48:56.528
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+<<<<<<< HEAD
 !SESSION 2018-11-27 11:35:10.934 -----------------------------------------------
 eclipse.buildId=4.8.0.I20180611-0500
 java.version=1.8.0_181
@@ -7625,10 +7626,24 @@ java.lang.ClassNotFoundException: org.eclipse.jgit.lfs.BuiltinLFS cannot be foun
 !ENTRY org.eclipse.egit.ui 2 0 2018-12-18 15:23:23.742
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\pratshar'. If this is
+=======
+!SESSION 2018-11-28 20:19:57.253 -----------------------------------------------
+eclipse.buildId=4.9.0.I20180906-0745
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-11-28 20:20:47.171
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\sharm'. If this is
+>>>>>>> faddc9ee5d0fb65b6334da4102b9c938066ffe4b
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.jface.text 2 0 2018-12-18 15:24:22.943
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
 
@@ -8438,4 +8453,7 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
 
 !ENTRY org.eclipse.jface.text 2 0 2018-12-19 15:44:59.864
+=======
+!ENTRY org.eclipse.jface.text 2 0 2018-11-28 21:58:37.216
+>>>>>>> faddc9ee5d0fb65b6334da4102b9c938066ffe4b
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'

@@ -1,11 +1,20 @@
 package hackerEarthProblems;
 
+<<<<<<< HEAD
 import java.util.Stack;
 
 import com.java.fastIO.InputReader;
 
 public class MonkAndGobletOfFire {
 	static Stack<Long> stack = new Stack<>();
+=======
+import com.java.fastIO.InputReader;
+
+import java.util.Stack;
+
+public class MonkAndGobletOfFire {
+    static Stack<Long> stack = new Stack<>();
+>>>>>>> faddc9ee5d0fb65b6334da4102b9c938066ffe4b
 
     public static void main(String args[]){
         InputReader reader = new InputReader(System.in);
@@ -18,7 +27,10 @@ public class MonkAndGobletOfFire {
         MyDataStructure FOUR = new MyDataStructure(repetition);
         // Main queue, that will hold school Numbers
         MyDataStructure MAIN = new MyDataStructure(repetition);
+<<<<<<< HEAD
         MyDataStructure extra_Queue = new MyDataStructure(repetition);
+=======
+>>>>>>> faddc9ee5d0fb65b6334da4102b9c938066ffe4b
 
         // Queue, this will store school Number
         // For above queue
@@ -45,6 +57,7 @@ public class MonkAndGobletOfFire {
                     insertToQueue(FOUR,rollNumber,"Four");
                 }
 
+<<<<<<< HEAD
                
                 if(isEmpty(extra_Queue)) {
                 	if(!isEmpty(MAIN)) {
@@ -118,6 +131,38 @@ public class MonkAndGobletOfFire {
                 		}
                 	}
                 	
+=======
+                // Inserting School Number in main queue
+                if(!isEmpty(MAIN)) {
+                    //  System.out.println("Position of rear from MAIN before traversing :" + MAIN.getRear());
+                    int temp = MAIN.getRear();
+                    long[] queue = MAIN.getRollNumbeQueue();
+                    while (temp > MAIN.getFront()) {
+                        if (queue[temp] != schoolNumber) {
+                            // Pop from main queue
+                            long removed = deleteFromQueueRear(MAIN, "From Main Queue");
+                            // System.out.println("Removed from Main queue to stack :" + removed);
+                            stack.add(removed);
+                        } else {
+                            stack.add(queue[temp]);
+                            break;
+                        }
+                        temp--;
+                    }
+
+                    // Add everything back from stack to Queue
+                    while (!stack.isEmpty()) {
+                        long element = stack.peek();
+                        insertToQueue(MAIN, element, "Main Queue from stack");
+                        stack.pop();
+                    }
+                    if (temp ==  MAIN.getFront()){
+                        insertToQueue(MAIN, schoolNumber, "Inserting at the end of Main Queue");
+                    }
+
+                }else{
+                    insertToQueue(MAIN,schoolNumber,"Inserting at start of Main Queue");
+>>>>>>> faddc9ee5d0fb65b6334da4102b9c938066ffe4b
                 }
 
             }else if('D' == operation){
@@ -204,7 +249,11 @@ public class MonkAndGobletOfFire {
             currentObjectFront++;
             removedElement = tempQueue[currentObjectFront];
 
+<<<<<<< HEAD
             // Setting new value to Current Object
+=======
+            // Setting new value to Curren Object
+>>>>>>> faddc9ee5d0fb65b6334da4102b9c938066ffe4b
             ds.setFront(currentObjectFront);
             ds.setRollNumbeQueue(tempQueue);
         }else{
@@ -214,6 +263,7 @@ public class MonkAndGobletOfFire {
     }
 }
 
+<<<<<<< HEAD
 class MyDataStructure{
     private int rear;
     private int front;
@@ -253,3 +303,5 @@ class MyDataStructure{
         return "Rear :"+rear+" Front :"+front+" RollNumberQueue :"+rollNumbeQueue.toString();
     }
 }
+=======
+>>>>>>> faddc9ee5d0fb65b6334da4102b9c938066ffe4b
