@@ -1,117 +1,65 @@
 package hackerEarthProblems;
 
-import java.util.Scanner;
+import java.io.PrintWriter;
+import java.util.Stack;
 
 import com.java.fastIO.InputReader;
 
 public class MonkandPrisonerofAzkaban {
 
-	public static void main(String[] args) {
-		InputReader reader = new InputReader(System.in); 
-		int size = reader.readInt();
-		int top=-1;
-		
-		long[] array = new long[size];
-		for (int i = 0; i < array.length; i++) {
-			long element = reader.readLong();
-			int x = 0;
-			if(top == -1) {
-				//push element to stack, if array is empty
-				top++;
-				pushToStack(array,top,element);
-				x = -1;
-				System.out.println("Value of x :"+x);	
-			}else {
-				// Keep popping from stack until greater element found
-				long[] tempArray = array;
-				int tempTop = top;
-				x = keepPopping(tempArray,tempTop,element);
-				System.out.println("Value of x :"+x);
-				
-				// then push to stack
-				top++;
-				pushToStack(array,top,element);
-			}
-			
-		}
-	
-		
-	}
-	
-	public static void pushToStack(long[] array,int top, long element) {
-		// Check if stack is not full already
-		if(top != array.length) {
-			array[top] = element;
-		}else {
-			System.out.println("Stack is full!!");
-		}
-	}
-	
-	public static int keepPopping(long[] array, int top, long element) {
-		//System.out.println("Top value :"+top);
-		if(top == -1) {
-			return -1;
-		}		
-		//System.out.println("Comparing :"+element+" and "+array[top]);
-		if(array[top] > element) {
-			return top+1;
-		}
-		top--;
-		return keepPopping(array, top, element);
-	}
-	
-	
-	
-	
-	
-	/*	
-	for (int i = 0; i < array.length; i++) {
-		int x = 0;
-		int y = 0;
-		// Finding value of x 
-		if(i > rear) {
-			boolean flag = true;
-			for(int j = i-1; j > -1; j--) {
-				//System.out.println("Value of J :"+j);
-				//System.out.println("Comparing for x :"+array[j]+" and :"+array[i]);
-				if(array[j] > array[i]) {
-					x = j+1;
-					flag= false;
-					break;
-				}
-			}
-			if(flag) {
-				x = -1;
-			}
-		}else {
-			//System.out.println("I smaller than rear and value of i is :"+i);
-			x = -1;
-		}
-		
-		// Finding value of y
-		if(front > i) {
-			boolean flag = true;
-			for(int j=i+1; front > j;j++) {
-				//System.out.println("Value of J :"+j);
-				//System.out.println("Comparing for y :"+array[j]+" and :"+array[i]);
-				if(array[j] > array[i]) {
-					y = j+1;
-					flag= false;
-					break;
-				}
-			}
-			if(flag) {
-				y = -1;
-			}
-		}else {
-			//System.out.println("I Greater than front and value of i is :"+i);
-			y = -1;
-		}
-		
-		//System.out.println("Value of x :"+x+" and y :"+y);
-		System.out.print((x+y)+" ");
-		
-	}
-	*/
 
+	public static void main(String[] args) {
+		PrintWriter out = new PrintWriter(System.out);
+		InputReader reader = new InputReader(System.in); 
+		
+		int size = reader.readInt();
+		long[] arr = new long[size];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = reader.readLong();
+		}
+		
+
+        Stack<Integer> s = new Stack<>(); 
+        int nge[] = new int[arr.length]; 
+  
+        Stack<Long> stack = new Stack<>();
+        
+        // iterate for rest of the elements  
+        for (int i = arr.length - 1; i >= 0; i--) { 
+              
+            if (!s.empty()) { 
+                while (!s.empty() && s.peek() <= arr[i]) { 
+                    s.pop(); 
+                } 
+            } 
+            nge[i] = s.empty() ? -1 : s.peek(); 
+            stack.push(arr[i]); 
+  
+        } 
+        for(int i = 0; i < arr.length; i++)  
+        System.out.println(arr[i] + " --> " + nge[i]); 
+		
+		
+		stack = new Stack<>();
+		// Getting Previous Greatest Element
+		long[] x = new long[size];
+		x[0] = -1;
+		for (int i = 0; i < x.length; i++) {
+			if(!stack.isEmpty()) {
+				while(!stack.isEmpty() && stack.peek() < arr[i]) {
+					stack.pop();
+				}
+			}
+			x[i] = stack.isEmpty() ? -1 : (i+1);
+			stack.add(arr[i]);
+		}
+		
+		for (int i = 0; i < x.length-1; i++) {
+			System.out.println(arr[i]+" ---> "+x[i]);
+		}
+		
+		// Closing PrintWrriter
+		 out.println();
+	     out.close();
+	}
 }
